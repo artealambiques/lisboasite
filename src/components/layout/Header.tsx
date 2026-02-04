@@ -10,6 +10,12 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 
+const languageOptions = [
+  { code: 'pt-br' as const, label: 'Português (BR)', flag: '🇧🇷' },
+  { code: 'pt-pt' as const, label: 'Português (PT)', flag: '🇵🇹' },
+  { code: 'es' as const, label: 'Español', flag: '🇪🇸' },
+];
+
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { language, setLanguage, t } = useLanguage();
@@ -23,6 +29,8 @@ export function Header() {
   ];
 
   const isActive = (path: string) => location.pathname === path;
+
+  const currentLanguage = languageOptions.find(l => l.code === language) || languageOptions[0];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm shadow-lg">
@@ -64,16 +72,21 @@ export function Header() {
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="sm" className="text-primary-foreground hover:text-accent hover:bg-primary-foreground/10">
                   <Globe className="w-4 h-4 mr-2" />
-                  {language.toUpperCase()}
+                  <span className="text-lg mr-1">{currentLanguage.flag}</span>
+                  {language === 'pt-br' ? 'PT-BR' : language === 'pt-pt' ? 'PT-PT' : 'ES'}
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent>
-                <DropdownMenuItem onClick={() => setLanguage('pt')}>
-                  🇧🇷 Português
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setLanguage('es')}>
-                  🇪🇸 Español
-                </DropdownMenuItem>
+                {languageOptions.map((option) => (
+                  <DropdownMenuItem 
+                    key={option.code} 
+                    onClick={() => setLanguage(option.code)}
+                    className="cursor-pointer"
+                  >
+                    <span className="text-lg mr-2">{option.flag}</span>
+                    {option.label}
+                  </DropdownMenuItem>
+                ))}
               </DropdownMenuContent>
             </DropdownMenu>
 
@@ -113,16 +126,25 @@ export function Header() {
                 </Link>
               ))}
               
-              <div className="flex items-center gap-4 pt-4 border-t border-primary-foreground/10">
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => setLanguage(language === 'pt' ? 'es' : 'pt')}
-                  className="text-primary-foreground hover:text-accent"
-                >
-                  <Globe className="w-4 h-4 mr-2" />
-                  {language === 'pt' ? 'Español' : 'Português'}
-                </Button>
+              <div className="flex flex-col gap-2 pt-4 border-t border-primary-foreground/10">
+                <p className="text-primary-foreground/70 text-sm mb-2">Idioma / Language</p>
+                {languageOptions.map((option) => (
+                  <Button
+                    key={option.code}
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => {
+                      setLanguage(option.code);
+                      setIsMenuOpen(false);
+                    }}
+                    className={`justify-start text-primary-foreground hover:text-accent ${
+                      language === option.code ? 'bg-primary-foreground/10' : ''
+                    }`}
+                  >
+                    <span className="text-lg mr-2">{option.flag}</span>
+                    {option.label}
+                  </Button>
+                ))}
               </div>
             </nav>
           </div>
