@@ -72,8 +72,7 @@ export function Header() {
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="sm" className="text-primary-foreground hover:text-accent hover:bg-primary-foreground/10">
                   <Globe className="w-4 h-4 mr-2" />
-                  <span className="text-lg mr-1">{currentLanguage.flag}</span>
-                  {language === 'pt-br' ? 'PT-BR' : language === 'pt-pt' ? 'PT-PT' : 'ES'}
+                  <span className="text-lg">{currentLanguage.flag}</span>
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent>
