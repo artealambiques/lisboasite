@@ -62,7 +62,7 @@ export default function Index() {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-lg px-8">
+              <Button asChild size="lg" className="bg-gradient-copper hover:opacity-90 text-primary font-semibold text-lg px-8">
                 <Link to="/produtos">
                   {t('hero.products')}
                 </Link>
