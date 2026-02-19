@@ -9,11 +9,14 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import flagBR from '@/assets/flag-br.png';
+import flagPT from '@/assets/flag-pt.png';
+import flagES from '@/assets/flag-es.png';
 
 const languageOptions = [
-  { code: 'pt-br' as const, label: 'Português (BR)', flag: '🇧🇷' },
-  { code: 'pt-pt' as const, label: 'Português (PT)', flag: '🇵🇹' },
-  { code: 'es' as const, label: 'Español', flag: '🇪🇸' },
+  { code: 'pt-br' as const, label: 'Português (BR)', flag: flagBR },
+  { code: 'pt-pt' as const, label: 'Português (PT)', flag: flagPT },
+  { code: 'es' as const, label: 'Español', flag: flagES },
 ];
 
 export function Header() {
@@ -72,7 +75,7 @@ export function Header() {
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="sm" className="text-primary-foreground hover:text-accent hover:bg-primary-foreground/10">
                   <Globe className="w-4 h-4 mr-2" />
-                  <span className="text-lg">{currentLanguage.flag}</span>
+                  <img src={currentLanguage.flag} alt="" className="w-6 h-4 object-cover rounded-sm" />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent>
@@ -82,7 +85,7 @@ export function Header() {
                     onClick={() => setLanguage(option.code)}
                     className="cursor-pointer"
                   >
-                    <span className="text-lg mr-2">{option.flag}</span>
+                    <img src={option.flag} alt="" className="w-6 h-4 object-cover rounded-sm mr-2" />
                     {option.label}
                   </DropdownMenuItem>
                 ))}
@@ -140,7 +143,7 @@ export function Header() {
                       language === option.code ? 'bg-primary-foreground/10' : ''
                     }`}
                   >
-                    <span className="text-lg mr-2">{option.flag}</span>
+                    <img src={option.flag} alt="" className="w-6 h-4 object-cover rounded-sm mr-2" />
                     {option.label}
                   </Button>
                 ))}
