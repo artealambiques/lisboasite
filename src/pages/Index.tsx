@@ -5,12 +5,25 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import heroImage from '@/assets/hero-alambique.jpg';
 
+// SVG barrel icon component
+const BarrelIcon = () => (
+  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-10 h-10">
+    <ellipse cx="32" cy="10" rx="18" ry="6" stroke="currentColor" strokeWidth="2.5" fill="none"/>
+    <ellipse cx="32" cy="54" rx="18" ry="6" stroke="currentColor" strokeWidth="2.5" fill="none"/>
+    <path d="M14 10 C8 20 8 44 14 54" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
+    <path d="M50 10 C56 20 56 44 50 54" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
+    <path d="M10 28 C14 26 50 26 54 28" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
+    <path d="M10 36 C14 38 50 38 54 36" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
+    <path d="M32 4 L32 60" stroke="currentColor" strokeWidth="1.5" strokeDasharray="3 3" opacity="0.4"/>
+  </svg>
+);
+
 // Product category icons and data
 const productCategories = [
   { key: 'distillation', icon: '🔥' },
   { key: 'processing', icon: '⚙️' },
   { key: 'fermentation', icon: '🧪' },
-  { key: 'aging', icon: '🪵' },
+  { key: 'aging', icon: 'barrel' },
   { key: 'bottling', icon: '🍾' },
   { key: 'accessories', icon: '🔧' },
 ];
@@ -152,7 +165,11 @@ export default function Index() {
                 <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border/50 overflow-hidden">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <span className="text-4xl">{category.icon}</span>
+                      {category.icon === 'barrel' ? (
+                        <span className="text-accent"><BarrelIcon /></span>
+                      ) : (
+                        <span className="text-4xl">{category.icon}</span>
+                      )}
                       <div className="flex-1">
                         <h3 className="font-display text-xl font-semibold mb-2 group-hover:text-accent transition-colors">
                           {t(`products.${category.key}`)}
