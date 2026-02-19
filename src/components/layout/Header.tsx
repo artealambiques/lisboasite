@@ -16,7 +16,7 @@ import flagES from '@/assets/flag-es.png';
 const languageOptions = [
   { code: 'pt-br' as const, label: 'Português (BR)', flag: flagBR },
   { code: 'pt-pt' as const, label: 'Português (PT)', flag: flagPT },
-  { code: 'es' as const, label: 'Español', flag: flagES },
+  { code: 'es' as const, label: 'Español (ES)', flag: flagES },
 ];
 
 export function Header() {
