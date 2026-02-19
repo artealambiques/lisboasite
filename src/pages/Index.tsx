@@ -26,6 +26,7 @@ const stats = [
   { key: 'years', value: '30+' },
   { key: 'equipment', value: '500+' },
   { key: 'states', value: '20+' },
+  { key: 'countries', value: '3+' },
   { key: 'clients', value: '300+' },
 ];
 
@@ -113,7 +114,7 @@ export default function Index() {
       {/* Stats Section */}
       <section className="py-16 bg-primary">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
             {stats.map((stat) => (
               <div key={stat.key} className="text-center">
                 <div className="font-display text-4xl md:text-5xl font-bold text-accent mb-2">

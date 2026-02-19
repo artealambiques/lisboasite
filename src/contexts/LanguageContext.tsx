@@ -37,6 +37,7 @@ const translations = {
     'stats.years': 'Anos de Mercado',
     'stats.equipment': 'Equipamentos Fabricados',
     'stats.states': 'Estados Atendidos',
+    'stats.countries': 'Países Atendidos',
     'stats.clients': 'Clientes Satisfeitos',
     
     // Products Section
@@ -133,6 +134,7 @@ const translations = {
     'stats.years': 'Anos de Mercado',
     'stats.equipment': 'Equipamentos Fabricados',
     'stats.states': 'Estados Atendidos',
+    'stats.countries': 'Países Atendidos',
     'stats.clients': 'Clientes Satisfeitos',
     
     // Products Section
@@ -229,6 +231,7 @@ const translations = {
     'stats.years': 'Años en el Mercado',
     'stats.equipment': 'Equipos Fabricados',
     'stats.states': 'Estados Atendidos',
+    'stats.countries': 'Países Atendidos',
     'stats.clients': 'Clientes Satisfechos',
     
     // Products Section
