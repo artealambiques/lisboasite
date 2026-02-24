@@ -200,7 +200,7 @@ export default function Products() {
                   className="data-[state=active]:bg-gradient-copper data-[state=active]:text-primary px-4 py-3 rounded-lg border border-border data-[state=active]:border-transparent"
                 >
                   {category.icon === 'barrel' ? (
-                    <span className="mr-2 text-accent"><BarrelIcon className="w-5 h-5 inline" /></span>
+                    <span className="mr-2 text-foreground"><BarrelIcon className="w-5 h-5 inline" /></span>
                   ) : (
                     <span className="mr-2">{category.icon}</span>
                   )}
