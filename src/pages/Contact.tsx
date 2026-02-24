@@ -179,15 +179,11 @@ export default function Contact() {
                       <h3 className="font-semibold mb-1">{t('contact.info.phones')}</h3>
                       <p className="text-muted-foreground">
                         <a href="tel:+558231423721" className="hover:text-accent transition-colors">
-                          (82) 3142-3721
-                        </a>
-                        <br />
-                        <a href="tel:+5582996720031" className="hover:text-accent transition-colors">
-                          (82) 9 9672-0031
+                          +55 82 3142-3721
                         </a>
                         <br />
                         <a href="tel:+5582996720107" className="hover:text-accent transition-colors">
-                          (82) 9 9672-0107
+                          +55 82 9 9672-0107
                         </a>
                       </p>
                     </div>
