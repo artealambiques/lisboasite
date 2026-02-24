@@ -269,7 +269,7 @@ export default function Products() {
               </p>
             </div>
             <div className="text-center p-6">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-copper flex items-center justify-center text-primary-foreground">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-copper flex items-center justify-center text-white">
                 <BarrelIcon className="w-7 h-7" />
               </div>
               <h3 className="font-display font-semibold mb-2">Madeiras Nobres</h3>
