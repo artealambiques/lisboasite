@@ -3,6 +3,18 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
+const BarrelIcon = ({ className = "w-8 h-8" }: { className?: string }) => (
+  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+    <ellipse cx="32" cy="10" rx="18" ry="6" stroke="currentColor" strokeWidth="2.5" fill="none"/>
+    <ellipse cx="32" cy="54" rx="18" ry="6" stroke="currentColor" strokeWidth="2.5" fill="none"/>
+    <path d="M14 10 C8 20 8 44 14 54" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
+    <path d="M50 10 C56 20 56 44 50 54" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
+    <path d="M10 28 C14 26 50 26 54 28" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
+    <path d="M10 36 C14 38 50 38 54 36" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
+    <path d="M32 4 L32 60" stroke="currentColor" strokeWidth="1.5" strokeDasharray="3 3" opacity="0.4"/>
+  </svg>
+);
+
 interface Product {
   name: string;
   description: string;
@@ -257,8 +269,8 @@ export default function Products() {
               </p>
             </div>
             <div className="text-center p-6">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-copper flex items-center justify-center">
-                <span className="text-2xl">🪵</span>
+              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-copper flex items-center justify-center text-primary-foreground">
+                <BarrelIcon className="w-7 h-7" />
               </div>
               <h3 className="font-display font-semibold mb-2">Madeiras Nobres</h3>
               <p className="text-muted-foreground text-sm">
