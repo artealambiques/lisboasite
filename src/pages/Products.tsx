@@ -93,7 +93,7 @@ const categories: Category[] = [
   },
   {
     key: 'aging',
-    icon: '🪵',
+    icon: 'barrel',
     products: [
       {
         name: 'Barris de Carvalho Europeu',
@@ -199,7 +199,11 @@ export default function Products() {
                   value={category.key}
                   className="data-[state=active]:bg-gradient-copper data-[state=active]:text-primary px-4 py-3 rounded-lg border border-border data-[state=active]:border-transparent"
                 >
-                  <span className="mr-2">{category.icon}</span>
+                  {category.icon === 'barrel' ? (
+                    <span className="mr-2 text-accent"><BarrelIcon className="w-5 h-5 inline" /></span>
+                  ) : (
+                    <span className="mr-2">{category.icon}</span>
+                  )}
                   {t(`products.${category.key}`)}
                 </TabsTrigger>
               ))}
@@ -213,7 +217,11 @@ export default function Products() {
                     <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border/50 overflow-hidden">
                       <CardHeader className="pb-4">
                         <div className="flex items-center gap-3 mb-2">
-                          <span className="text-2xl">{category.icon}</span>
+                          {category.icon === 'barrel' ? (
+                            <span className="text-accent"><BarrelIcon className="w-6 h-6" /></span>
+                          ) : (
+                            <span className="text-2xl">{category.icon}</span>
+                          )}
                           <CardTitle className="font-display text-xl group-hover:text-accent transition-colors">
                             {product.name}
                           </CardTitle>
