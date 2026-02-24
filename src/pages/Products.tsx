@@ -251,8 +251,14 @@ export default function Products() {
           </h2>
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="text-center p-6">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-copper flex items-center justify-center">
-                <span className="text-2xl">🔶</span>
+              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-copper flex items-center justify-center text-white">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-7 h-7">
+                  <circle cx="32" cy="28" r="16" stroke="currentColor" strokeWidth="2.5" fill="none"/>
+                  <path d="M18 20 C18 12 46 12 46 20" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
+                  <path d="M24 44 L24 52 L40 52 L40 44" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M28 52 L28 58 M36 52 L36 58" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                  <path d="M20 24 L22 28 M44 24 L42 28 M22 32 L18 34 M42 32 L46 34" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.6"/>
+                </svg>
               </div>
               <h3 className="font-display font-semibold mb-2">Cobre Martelado</h3>
               <p className="text-muted-foreground text-sm">
