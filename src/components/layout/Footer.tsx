@@ -85,13 +85,13 @@ export function Footer() {
               Redes Sociais
             </h4>
             <a
-              href="https://instagram.com/arte_e_tecnica_lisboa"
+              href="https://instagram.com/artetecnicalisboa"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 text-primary-foreground/80 hover:text-accent transition-colors"
             >
               <Instagram className="w-5 h-5" />
-              <span className="text-sm">@arte_e_tecnica_lisboa</span>
+              <span className="text-sm">@artetecnicalisboa</span>
             </a>
           </div>
         </div>
