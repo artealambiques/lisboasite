@@ -86,7 +86,7 @@ export function Header() {
             </DropdownMenu>
 
             <Button asChild className="bg-gradient-copper hover:opacity-90 text-primary font-semibold">
-              <Link to="/contato">{t('hero.cta')}</Link>
+              <a href="https://wa.me/5582996720107?text=Quero%20saber%20mais!" target="_blank" rel="noopener noreferrer">{t('hero.cta')}</a>
             </Button>
           </div>
 

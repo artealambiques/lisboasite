@@ -71,10 +71,10 @@ export default function Index() {
             </p>
             <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
               <Button asChild size="lg" className="bg-gradient-copper hover:opacity-90 text-primary font-semibold text-lg px-8">
-                <Link to="/contato">
+                <a href="https://wa.me/5582996720107?text=Quero%20saber%20mais!" target="_blank" rel="noopener noreferrer">
                   {t('hero.cta')}
                   <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
+                </a>
               </Button>
               <Button asChild size="lg" className="bg-gradient-copper hover:opacity-90 text-primary font-semibold text-lg px-8">
                 <Link to="/produtos">
@@ -208,10 +208,10 @@ export default function Index() {
             Entre em contato conosco e receba uma consultoria personalizada para sua destilaria.
           </p>
           <Button asChild size="lg" className="bg-gradient-copper hover:opacity-90 text-primary font-semibold text-lg px-8">
-            <Link to="/contato">
+            <a href="https://wa.me/5582996720107?text=Quero%20saber%20mais!" target="_blank" rel="noopener noreferrer">
               {t('hero.cta')}
               <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
+            </a>
           </Button>
         </div>
       </section>
