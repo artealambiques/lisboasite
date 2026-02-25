@@ -197,10 +197,10 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold mb-1">{t('contact.info.email')}</h3>
                       <a
-                        href="mailto:artealambiques@gmail.com"
+                        href="mailto:contato@artetecnicalisboa.com.br"
                         className="text-muted-foreground hover:text-accent transition-colors"
                       >
-                        artealambiques@gmail.com
+                        contato@artetecnicalisboa.com.br
                       </a>
                     </div>
                   </div>
