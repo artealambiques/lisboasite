@@ -38,9 +38,9 @@ const features = [
 const stats = [
   { key: 'years', value: '30+' },
   { key: 'equipment', value: '500+' },
-  { key: 'states', value: '20+' },
+  { key: 'states', value: '10+' },
   { key: 'countries', value: '3+' },
-  { key: 'clients', value: '300+' },
+  { key: 'clients', value: '100+' },
 ];
 
 export default function Index() {
