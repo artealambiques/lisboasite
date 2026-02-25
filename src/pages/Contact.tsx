@@ -213,12 +213,12 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold mb-1">{t('contact.info.instagram')}</h3>
                       <a
-                        href="https://instagram.com/arte_e_tecnica_lisboa"
+                        href="https://instagram.com/artetecnicalisboa"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-accent transition-colors"
                       >
-                        arte_e_tecnica_lisboa
+                        artetecnicalisboa
                       </a>
                     </div>
                   </div>
