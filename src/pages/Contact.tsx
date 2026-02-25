@@ -218,7 +218,7 @@ export default function Contact() {
                         rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-accent transition-colors"
                       >
-                        @arte_e_tecnica_lisboa
+                        arte_e_tecnica_lisboa
                       </a>
                     </div>
                   </div>
