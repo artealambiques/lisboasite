@@ -12,6 +12,7 @@ import {
 import flagBR from '@/assets/flag-br.png';
 import flagPT from '@/assets/flag-pt.png';
 import flagES from '@/assets/flag-es.png';
+import logoLisboa from '@/assets/logo-lisboa.png';
 
 const languageOptions = [
   { code: 'pt-br' as const, label: 'Português (BR)', flag: flagBR },
@@ -41,15 +42,7 @@ export function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-full bg-gradient-copper flex items-center justify-center">
-              <span className="text-primary font-display font-bold text-xl">A</span>
-            </div>
-            <div className="hidden sm:block">
-              <h1 className="text-primary-foreground font-display font-bold text-lg leading-tight">
-                Arte & Técnica
-              </h1>
-              <p className="text-primary-foreground/70 text-xs tracking-wider">LISBOA</p>
-            </div>
+            <img src={logoLisboa} alt="Arte & Técnica Lisboa" className="h-14 w-auto object-contain" />
           </Link>
 
           {/* Desktop Navigation */}

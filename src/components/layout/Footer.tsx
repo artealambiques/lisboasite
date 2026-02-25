@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Instagram } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import logoLisboa from '@/assets/logo-lisboa.png';
 
 export function Footer() {
   const { t } = useLanguage();
@@ -12,15 +13,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-gradient-copper flex items-center justify-center">
-                <span className="text-primary font-display font-bold text-xl">A</span>
-              </div>
-              <div>
-                <h3 className="font-display font-bold text-lg">Arte & Técnica</h3>
-                <p className="text-primary-foreground/70 text-xs tracking-wider">LISBOA</p>
-              </div>
-            </div>
+            <img src={logoLisboa} alt="Arte & Técnica Lisboa" className="h-16 w-auto object-contain" />
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
               {t('footer.description')}
             </p>
