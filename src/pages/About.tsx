@@ -1,4 +1,5 @@
 import { CheckCircle, Target, Eye, Heart, Wrench, Factory, Ruler, Users, GraduationCap, Award } from 'lucide-react';
+import carlosMineiro from '@/assets/carlos-mineiro.png';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -57,11 +58,12 @@ export default function About() {
               </p>
             </div>
             <div className="relative">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-accent/20 to-primary/10 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="font-display text-8xl font-bold text-gradient-copper mb-4">30+</div>
-                  <p className="text-2xl font-display text-foreground">Anos de Experiência</p>
-                </div>
+              <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src={carlosMineiro} 
+                  alt="Carlos Mineiro - Arte & Técnica Lisboa" 
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
