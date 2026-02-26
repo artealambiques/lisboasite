@@ -17,7 +17,7 @@ const translations = {
     'nav.contact': 'Contato',
     
     // Hero Section
-    'hero.title': 'Tradição e Excelência em Equipamentos para Destilarias',
+    'hero.title': 'Tradição e Excelência em Equipamentos para Indústrias de Bebidas derivadas da Cana-de-açúcar',
     'hero.subtitle': 'Há mais de 30 anos fabricando equipamentos de alta qualidade para a produção de cachaça e bebidas destiladas',
     'hero.cta': 'Fale Conosco',
     'hero.products': 'Ver Produtos',
@@ -114,7 +114,7 @@ const translations = {
     'nav.contact': 'Contacto',
     
     // Hero Section
-    'hero.title': 'Tradição e Excelência em Equipamentos para Destilarias',
+    'hero.title': 'Tradição e Excelência em Equipamentos para Indústrias de Bebidas derivadas da Cana-de-açúcar',
     'hero.subtitle': 'Há mais de 30 anos a fabricar equipamentos de alta qualidade para a produção de aguardente e bebidas destiladas',
     'hero.cta': 'Fale Connosco',
     'hero.products': 'Ver Produtos',
