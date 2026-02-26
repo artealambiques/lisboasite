@@ -22,7 +22,7 @@ export function Footer() {
           {/* Quick Links */}
           <div>
             <h4 className="font-display font-semibold text-lg mb-4 text-accent">
-              Links Rápidos
+              {t('footer.quickLinks')}
             </h4>
             <nav className="flex flex-col gap-2">
               <Link to="/" className="text-primary-foreground/80 hover:text-accent transition-colors text-sm">
@@ -75,7 +75,7 @@ export function Footer() {
           {/* Social */}
           <div>
             <h4 className="font-display font-semibold text-lg mb-4 text-accent">
-              Redes Sociais
+              {t('footer.socialMedia')}
             </h4>
             <a
               href="https://instagram.com/artetecnicalisboa"

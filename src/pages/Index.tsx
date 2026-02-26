@@ -202,10 +202,10 @@ export default function Index() {
         <div className="absolute inset-0 bg-hero-pattern opacity-30" />
         <div className="container relative z-10 mx-auto px-4 text-center">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
-            Pronto para começar seu projeto?
+            {t('cta.title')}
           </h2>
           <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
-            Entre em contato conosco e receba uma consultoria personalizada para sua destilaria.
+            {t('cta.subtitle')}
           </p>
           <Button asChild size="lg" className="bg-gradient-copper hover:opacity-90 text-primary font-semibold text-lg px-8">
             <a href="https://wa.me/5582996720107?text=Quero%20saber%20mais!" target="_blank" rel="noopener noreferrer">

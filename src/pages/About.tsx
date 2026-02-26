@@ -3,11 +3,11 @@ import carlosMineiro from '@/assets/carlos-mineiro.png';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from '@/components/ui/card';
 
-const values = [
-  { icon: Award, label: 'Qualidade' },
-  { icon: Heart, label: 'Tradição' },
-  { icon: Target, label: 'Inovação' },
-  { icon: Users, label: 'Compromisso' },
+const valueKeys = [
+  { icon: Award, key: 'about.value.quality' },
+  { icon: Heart, key: 'about.value.tradition' },
+  { icon: Target, key: 'about.value.innovation' },
+  { icon: Users, key: 'about.value.commitment' },
 ];
 
 const services = [
@@ -18,6 +18,8 @@ const services = [
   { key: 'training', icon: GraduationCap },
   { key: 'standardization', icon: Award },
 ];
+
+const diffKeys = ['about.diff1', 'about.diff2', 'about.diff3', 'about.diff4', 'about.diff5', 'about.diff6', 'about.diff7', 'about.diff8'];
 
 export default function About() {
   const { t } = useLanguage();
@@ -45,16 +47,16 @@ export default function About() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="font-display text-3xl font-bold mb-6">
-                Mais de 30 Anos de Tradição
+                {t('about.historyTitle')}
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 {t('about.history')}
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Nossa trajetória é marcada pela busca incessante pela excelência. Cada equipamento que produzimos carrega a expertise acumulada ao longo de décadas, combinando técnicas tradicionais de fabricação com tecnologia moderna.
+                {t('about.historyP2')}
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Atendemos destilarias em diversos estados brasileiros e também exportamos para países da América Latina, sempre mantendo o compromisso com a qualidade e o suporte técnico personalizado.
+                {t('about.historyP3')}
               </p>
             </div>
             <div className="relative">
@@ -114,13 +116,13 @@ export default function About() {
                   {t('about.values.title')}
                 </h3>
                 <div className="grid grid-cols-2 gap-3">
-                  {values.map((value) => (
+                  {valueKeys.map((value) => (
                     <span
-                      key={value.label}
+                      key={value.key}
                       className="inline-flex items-center gap-1 px-3 py-1 bg-secondary rounded-full text-sm"
                     >
                       <CheckCircle className="w-4 h-4 text-accent" />
-                      {value.label}
+                      {t(value.key)}
                     </span>
                   ))}
                 </div>
@@ -172,23 +174,14 @@ export default function About() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-display text-3xl font-bold text-primary-foreground text-center mb-12">
-              Diferenciais Técnicos
+              {t('about.differentials')}
             </h2>
             
             <div className="grid md:grid-cols-2 gap-6">
-              {[
-                'Soldas neutras para evitar contaminação',
-                'Válvulas de alívio de pressão e anti-vácuo',
-                'Sistema de limpeza CIP integrado',
-                'Conexões em bronze de alta durabilidade',
-                'Cobre martelado para melhor catálise',
-                'Aço inox 304 escovado antisséptico',
-                'Aquecimento versátil: vapor, fogo ou elétrico',
-                'Conformidade com normas técnicas',
-              ].map((item, index) => (
-                <div key={index} className="flex items-center gap-3">
+              {diffKeys.map((key) => (
+                <div key={key} className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-accent shrink-0" />
-                  <span className="text-primary-foreground/90">{item}</span>
+                  <span className="text-primary-foreground/90">{t(key)}</span>
                 </div>
               ))}
             </div>

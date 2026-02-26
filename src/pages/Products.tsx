@@ -16,9 +16,9 @@ const BarrelIcon = ({ className = "w-8 h-8" }: { className?: string }) => (
 );
 
 interface Product {
-  name: string;
-  description: string;
-  specs?: string[];
+  nameKey: string;
+  descKey: string;
+  specKeys?: string[];
 }
 
 interface Category {
@@ -33,19 +33,19 @@ const categories: Category[] = [
     icon: '🔥',
     products: [
       {
-        name: 'Alambiques em Cobre',
-        description: 'Fabricados em cobre martelado, polido e envernizado. Equipados com soldas neutras, válvulas de segurança e sistema de limpeza integrado.',
-        specs: ['Aquecimento: vapor, fogo direto ou elétrico', 'Válvulas de alívio e anti-vácuo', 'Portas de inspeção', 'Conexões em bronze'],
+        nameKey: 'product.copperStills',
+        descKey: 'product.copperStills.desc',
+        specKeys: ['product.copperStills.spec1', 'product.copperStills.spec2', 'product.copperStills.spec3', 'product.copperStills.spec4'],
       },
       {
-        name: 'Colunas Contínuas',
-        description: 'Desenvolvidas em cobre liso ou martelado para produção em larga escala. Ideais para diversas bebidas destiladas.',
-        specs: ['Alta produtividade', 'Fracionamento contínuo', 'Design modular', 'Fácil manutenção'],
+        nameKey: 'product.continuousColumns',
+        descKey: 'product.continuousColumns.desc',
+        specKeys: ['product.continuousColumns.spec1', 'product.continuousColumns.spec2', 'product.continuousColumns.spec3', 'product.continuousColumns.spec4'],
       },
       {
-        name: 'Caldeiras Geradoras de Vapor',
-        description: 'Sistemas completos para fornecimento de vapor aos processos de destilação e aquecimento.',
-        specs: ['Diversos tamanhos', 'Alta eficiência', 'Segurança certificada'],
+        nameKey: 'product.steamBoilers',
+        descKey: 'product.steamBoilers.desc',
+        specKeys: ['product.steamBoilers.spec1', 'product.steamBoilers.spec2', 'product.steamBoilers.spec3'],
       },
     ],
   },
@@ -54,19 +54,19 @@ const categories: Category[] = [
     icon: '⚙️',
     products: [
       {
-        name: 'Moendas para Cana-de-açúcar',
-        description: 'Projetadas para processar cana inteira ou picada com alto índice de eficiência na extração.',
-        specs: ['Tecnologia moderna', 'Diversas capacidades e potências', 'Alta segurança operacional', 'Manutenção simplificada'],
+        nameKey: 'product.sugarcaneMills',
+        descKey: 'product.sugarcaneMills.desc',
+        specKeys: ['product.sugarcaneMills.spec1', 'product.sugarcaneMills.spec2', 'product.sugarcaneMills.spec3', 'product.sugarcaneMills.spec4'],
       },
       {
-        name: 'Filtro Rotativo',
-        description: 'Fabricado em aço inox 304 para filtragem de alta eficiência do caldo de cana.',
-        specs: ['Inox 304', 'Alta eficiência', 'Fácil limpeza'],
+        nameKey: 'product.rotaryFilter',
+        descKey: 'product.rotaryFilter.desc',
+        specKeys: ['product.rotaryFilter.spec1', 'product.rotaryFilter.spec2', 'product.rotaryFilter.spec3'],
       },
       {
-        name: 'Tachos de Cozimento',
-        description: 'Para produção de melado, fabricados em aço inox 304 com pés em aço carbono.',
-        specs: ['Aquecimento a vapor', 'Estrutura robusta', 'Diversos tamanhos'],
+        nameKey: 'product.cookingVats',
+        descKey: 'product.cookingVats.desc',
+        specKeys: ['product.cookingVats.spec1', 'product.cookingVats.spec2', 'product.cookingVats.spec3'],
       },
     ],
   },
@@ -75,19 +75,19 @@ const categories: Category[] = [
     icon: '🧪',
     products: [
       {
-        name: 'Dornas de Fermentação',
-        description: 'Fabricadas em aço inox 304 escovado, disponíveis em diversos modelos e capacidades.',
-        specs: ['Inox 304 escovado', 'Fácil higienização', 'Modelos variados'],
+        nameKey: 'product.fermentationVats',
+        descKey: 'product.fermentationVats.desc',
+        specKeys: ['product.fermentationVats.spec1', 'product.fermentationVats.spec2', 'product.fermentationVats.spec3'],
       },
       {
-        name: 'Reservatórios',
-        description: 'Tanques em aço inox para armazenamento e preparação do mosto.',
-        specs: ['Diversas capacidades', 'Acabamento sanitário', 'Resistência à corrosão'],
+        nameKey: 'product.reservoirs',
+        descKey: 'product.reservoirs.desc',
+        specKeys: ['product.reservoirs.spec1', 'product.reservoirs.spec2', 'product.reservoirs.spec3'],
       },
       {
-        name: 'Tanques Decantadores',
-        description: 'Sistemas para diluição e decantação com design otimizado.',
-        specs: ['Fundo cônico', 'Válvulas de descarga', 'Inox 304'],
+        nameKey: 'product.settlingTanks',
+        descKey: 'product.settlingTanks.desc',
+        specKeys: ['product.settlingTanks.spec1', 'product.settlingTanks.spec2', 'product.settlingTanks.spec3'],
       },
     ],
   },
@@ -96,14 +96,14 @@ const categories: Category[] = [
     icon: 'barrel',
     products: [
       {
-        name: 'Barris de Carvalho Europeu',
-        description: 'Barris de aproximadamente 200 litros, remontados, reformados, flambados, lixados e pintados.',
-        specs: ['~200 litros', 'Carvalho europeu', 'Flambagem controlada', 'Acabamento profissional'],
+        nameKey: 'product.oakBarrels',
+        descKey: 'product.oakBarrels.desc',
+        specKeys: ['product.oakBarrels.spec1', 'product.oakBarrels.spec2', 'product.oakBarrels.spec3', 'product.oakBarrels.spec4'],
       },
       {
-        name: 'Dornas de Madeira Nacional',
-        description: 'Disponíveis em diversos formatos incluindo pirâmides. Ideais para envelhecimento de cachaça.',
-        specs: ['Madeiras nacionais diversas', 'Formatos variados', 'Grande capacidade', 'Perfil sensorial único'],
+        nameKey: 'product.woodCasks',
+        descKey: 'product.woodCasks.desc',
+        specKeys: ['product.woodCasks.spec1', 'product.woodCasks.spec2', 'product.woodCasks.spec3', 'product.woodCasks.spec4'],
       },
     ],
   },
@@ -112,24 +112,24 @@ const categories: Category[] = [
     icon: '🍾',
     products: [
       {
-        name: 'Engarrafadoras',
-        description: 'Máquinas disponíveis em configurações de 2, 4 e 6 bicos para diferentes escalas de produção.',
-        specs: ['2, 4 ou 6 bicos', 'Alta precisão', 'Operação simples'],
+        nameKey: 'product.bottlingMachines',
+        descKey: 'product.bottlingMachines.desc',
+        specKeys: ['product.bottlingMachines.spec1', 'product.bottlingMachines.spec2', 'product.bottlingMachines.spec3'],
       },
       {
-        name: 'Rinser (Lavador de Garrafas)',
-        description: 'Equipamento para limpeza asséptica das garrafas antes do envase.',
-        specs: ['Limpeza eficiente', 'Operação rápida', 'Baixo consumo de água'],
+        nameKey: 'product.rinser',
+        descKey: 'product.rinser.desc',
+        specKeys: ['product.rinser.spec1', 'product.rinser.spec2', 'product.rinser.spec3'],
       },
       {
-        name: 'Rosquiadeiras de Tampas',
-        description: 'Máquinas automáticas ou semiautomáticas para fechamento com torque controlado.',
-        specs: ['Torque ajustável', 'Alta velocidade', 'Diversos tipos de tampas'],
+        nameKey: 'product.cappers',
+        descKey: 'product.cappers.desc',
+        specKeys: ['product.cappers.spec1', 'product.cappers.spec2', 'product.cappers.spec3'],
       },
       {
-        name: 'Carro Plataforma',
-        description: 'Equipamento para transporte interno e secagem de garrafas.',
-        specs: ['Estrutura robusta', 'Fácil manuseio', 'Otimiza o fluxo'],
+        nameKey: 'product.platformCart',
+        descKey: 'product.platformCart.desc',
+        specKeys: ['product.platformCart.spec1', 'product.platformCart.spec2', 'product.platformCart.spec3'],
       },
     ],
   },
@@ -138,29 +138,29 @@ const categories: Category[] = [
     icon: '🔧',
     products: [
       {
-        name: 'Alcoômetros',
-        description: 'Instrumentos de alta precisão para medição do teor alcoólico.',
-        specs: ['Alta precisão', 'Fácil leitura', 'Calibrados'],
+        nameKey: 'product.alcoholmeters',
+        descKey: 'product.alcoholmeters.desc',
+        specKeys: ['product.alcoholmeters.spec1', 'product.alcoholmeters.spec2', 'product.alcoholmeters.spec3'],
       },
       {
-        name: 'Termômetros',
-        description: 'Termômetros industriais para monitoramento preciso de temperatura.',
-        specs: ['Diversas escalas', 'Inox', 'Longa durabilidade'],
+        nameKey: 'product.thermometers',
+        descKey: 'product.thermometers.desc',
+        specKeys: ['product.thermometers.spec1', 'product.thermometers.spec2', 'product.thermometers.spec3'],
       },
       {
-        name: 'Filtros Especiais',
-        description: 'Modelos específicos para diferentes etapas de purificação da bebida.',
-        specs: ['Diversos tipos', 'Alta eficiência', 'Fácil troca'],
+        nameKey: 'product.specialFilters',
+        descKey: 'product.specialFilters.desc',
+        specKeys: ['product.specialFilters.spec1', 'product.specialFilters.spec2', 'product.specialFilters.spec3'],
       },
       {
-        name: 'Kits de Análise',
-        description: 'Conjuntos para verificação de acidez e presença de cobre, essenciais para conformidade regulatória.',
-        specs: ['Kit de acidez', 'Kit de cobre', 'Instruções completas'],
+        nameKey: 'product.analysisKits',
+        descKey: 'product.analysisKits.desc',
+        specKeys: ['product.analysisKits.spec1', 'product.analysisKits.spec2', 'product.analysisKits.spec3'],
       },
       {
-        name: 'Tampas',
-        description: 'Diversos modelos de tampas para garrafas.',
-        specs: ['Vários tamanhos', 'Rosca e pressão', 'Alta qualidade'],
+        nameKey: 'product.caps',
+        descKey: 'product.caps.desc',
+        specKeys: ['product.caps.spec1', 'product.caps.spec2', 'product.caps.spec3'],
       },
     ],
   },
@@ -223,20 +223,20 @@ export default function Products() {
                             <span className="text-2xl">{category.icon}</span>
                           )}
                           <CardTitle className="font-display text-xl group-hover:text-accent transition-colors">
-                            {product.name}
+                            {t(product.nameKey)}
                           </CardTitle>
                         </div>
                       </CardHeader>
                       <CardContent>
                         <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                          {product.description}
+                          {t(product.descKey)}
                         </p>
-                        {product.specs && (
+                        {product.specKeys && (
                           <ul className="space-y-2">
-                            {product.specs.map((spec, i) => (
+                            {product.specKeys.map((specKey, i) => (
                               <li key={i} className="flex items-center gap-2 text-sm">
                                 <div className="w-1.5 h-1.5 rounded-full bg-accent" />
-                                <span className="text-foreground/80">{spec}</span>
+                                <span className="text-foreground/80">{t(specKey)}</span>
                               </li>
                             ))}
                           </ul>
@@ -255,7 +255,7 @@ export default function Products() {
       <section className="py-16 bg-card">
         <div className="container mx-auto px-4">
           <h2 className="font-display text-2xl font-bold text-center mb-8">
-            Materiais de Alta Qualidade
+            {t('products.materialsTitle')}
           </h2>
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="text-center p-6">
@@ -268,27 +268,27 @@ export default function Products() {
                   <path d="M20 24 L22 28 M44 24 L42 28 M22 32 L18 34 M42 32 L46 34" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.6"/>
                 </svg>
               </div>
-              <h3 className="font-display font-semibold mb-2">Cobre Martelado</h3>
+              <h3 className="font-display font-semibold mb-2">{t('products.copper')}</h3>
               <p className="text-muted-foreground text-sm">
-                Aumenta a área de contato para melhor catálise e neutralização de impurezas.
+                {t('products.copper.desc')}
               </p>
             </div>
             <div className="text-center p-6">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-copper flex items-center justify-center">
                 <span className="text-2xl">🔩</span>
               </div>
-              <h3 className="font-display font-semibold mb-2">Aço Inox 304</h3>
+              <h3 className="font-display font-semibold mb-2">{t('products.steel')}</h3>
               <p className="text-muted-foreground text-sm">
-                Resistência à corrosão ácida e acabamento escovado antisséptico.
+                {t('products.steel.desc')}
               </p>
             </div>
             <div className="text-center p-6">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-copper flex items-center justify-center text-white">
                 <BarrelIcon className="w-7 h-7" />
               </div>
-              <h3 className="font-display font-semibold mb-2">Madeiras Nobres</h3>
+              <h3 className="font-display font-semibold mb-2">{t('products.wood')}</h3>
               <p className="text-muted-foreground text-sm">
-                Carvalho europeu e madeiras nacionais para envelhecimento premium.
+                {t('products.wood.desc')}
               </p>
             </div>
           </div>
