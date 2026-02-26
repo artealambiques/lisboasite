@@ -12,12 +12,14 @@ import {
 import flagBR from '@/assets/flag-br.png';
 import flagPT from '@/assets/flag-pt.png';
 import flagES from '@/assets/flag-es.png';
+import flagUS from '@/assets/flag-us.png';
 import logoLisboa from '@/assets/logo-lisboa.png';
 
 const languageOptions = [
   { code: 'pt-br' as const, label: 'Português (BR)', flag: flagBR },
   { code: 'pt-pt' as const, label: 'Português (PT)', flag: flagPT },
   { code: 'es' as const, label: 'Español (ES)', flag: flagES },
+  { code: 'en' as const, label: 'English (US)', flag: flagUS },
 ];
 
 export function Header() {

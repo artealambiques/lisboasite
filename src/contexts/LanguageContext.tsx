@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
-type Language = 'pt-br' | 'pt-pt' | 'es';
+type Language = 'pt-br' | 'pt-pt' | 'es' | 'en';
 
 interface LanguageContextType {
   language: Language;
@@ -299,6 +299,103 @@ const translations = {
     
     // WhatsApp
     'whatsapp.message': '¡Hola! Me gustaría más información sobre equipos.',
+  },
+  en: {
+    // Navigation
+    'nav.home': 'Home',
+    'nav.about': 'About Us',
+    'nav.products': 'Products',
+    'nav.contact': 'Contact',
+    
+    // Hero Section
+    'hero.title': 'Tradition and Excellence in Equipment for Sugarcane Beverage Industries',
+    'hero.subtitle': 'Over 30 years manufacturing high-quality equipment for cachaça and distilled beverage production',
+    'hero.cta': 'Contact Us',
+    'hero.products': 'View Products',
+    
+    // Features
+    'features.title': 'Why choose Arte & Técnica Lisboa?',
+    'features.quality.title': 'Premium Quality',
+    'features.quality.desc': 'High-resistance materials such as hammered copper and 304 stainless steel',
+    'features.technology.title': 'Modern Technology',
+    'features.technology.desc': 'Equipment with safety systems and energy efficiency',
+    'features.experience.title': '30+ Years of Experience',
+    'features.experience.desc': 'Tradition and expertise recognized throughout Brazil',
+    'features.support.title': 'Technical Support',
+    'features.support.desc': 'Consulting, installation, and specialized maintenance',
+    
+    // Stats
+    'stats.years': 'Years in the Market',
+    'stats.equipment': 'Equipment Manufactured',
+    'stats.states': 'States Served',
+    'stats.countries': 'Countries Served',
+    'stats.clients': 'Satisfied Clients',
+    
+    // Products Section
+    'products.title': 'Our Products',
+    'products.subtitle': 'Complete solutions for your distillery',
+    'products.viewAll': 'View Full Catalog',
+    
+    // Product Categories
+    'products.distillation': 'Distillation',
+    'products.distillation.desc': 'Copper stills, continuous columns, and boilers',
+    'products.processing': 'Processing',
+    'products.processing.desc': 'Mills, rotary filters, and cooking vats',
+    'products.fermentation': 'Fermentation',
+    'products.fermentation.desc': 'Vats, reservoirs, and stainless steel tanks',
+    'products.aging': 'Aging',
+    'products.aging.desc': 'Oak barrels and domestic wood casks',
+    'products.bottling': 'Bottling',
+    'products.bottling.desc': 'Bottling machines, rinsers, and cappers',
+    'products.accessories': 'Accessories',
+    'products.accessories.desc': 'Alcoholmeters, thermometers, and analysis kits',
+    
+    // About Page
+    'about.title': 'Our History',
+    'about.subtitle': 'Over three decades of dedication to excellence',
+    'about.history': 'Arte & Técnica Lisboa was born from a passion for the Brazilian tradition of cachaça production. With over 30 years of experience, we have become a national reference in the manufacture of industrial equipment for distilleries.',
+    'about.mission.title': 'Mission',
+    'about.mission.desc': 'To provide high-quality equipment that enables our clients to produce excellent distilled beverages, preserving tradition while incorporating modern technology.',
+    'about.vision.title': 'Vision',
+    'about.vision.desc': 'To be recognized as the leading supplier of distillery equipment in Brazil and Latin America.',
+    'about.values.title': 'Values',
+    'about.values.desc': 'Quality, tradition, innovation, customer commitment, and respect for technical standards.',
+    
+    // Services
+    'services.title': 'Our Services',
+    'services.projects': 'Project Development',
+    'services.projects.desc': 'Complete development of customized projects for your distillery',
+    'services.manufacturing': 'Manufacturing & Installation',
+    'services.manufacturing.desc': 'Equipment production and on-site installation',
+    'services.sizing': 'Factory Sizing',
+    'services.sizing.desc': 'Complete planning and sizing of the industrial plant',
+    'services.consulting': 'Technical Consulting',
+    'services.consulting.desc': 'Technical visits and specialized guidance',
+    'services.training': 'Courses & Training',
+    'services.training.desc': 'Training for equipment operation and maintenance',
+    'services.standardization': 'Product Standardization',
+    'services.standardization.desc': 'Assistance in standardizing distillate quality',
+    
+    // Contact Page
+    'contact.title': 'Contact Us',
+    'contact.subtitle': 'We are ready to assist you',
+    'contact.form.name': 'Name',
+    'contact.form.email': 'Email',
+    'contact.form.phone': 'Phone',
+    'contact.form.message': 'Message',
+    'contact.form.submit': 'Send Message',
+    'contact.info.title': 'Contact Information',
+    'contact.info.address': 'Address',
+    'contact.info.phones': 'Phones',
+    'contact.info.email': 'Email',
+    'contact.info.instagram': 'Instagram',
+    
+    // Footer
+    'footer.rights': 'All rights reserved',
+    'footer.description': 'Manufacturing industrial equipment for distilleries since 1994',
+    
+    // WhatsApp
+    'whatsapp.message': 'Hello! I would like more information about equipment.',
   },
 };
 
