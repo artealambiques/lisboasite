@@ -113,7 +113,7 @@ export default function About() {
                 <h3 className="font-display text-2xl font-bold mb-4">
                   {t('about.values.title')}
                 </h3>
-                <div className="flex flex-wrap gap-2">
+                <div className="grid grid-cols-2 gap-3">
                   {values.map((value) => (
                     <span
                       key={value.label}
