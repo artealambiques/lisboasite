@@ -32,15 +32,15 @@ export default function Contact() {
       if (!response.ok) throw new Error('Erro ao enviar');
 
       toast({
-        title: 'Mensagem enviada!',
-        description: 'Entraremos em contato em breve.',
+        title: t('contact.success.title'),
+        description: t('contact.success.desc'),
       });
 
       setFormData({ name: '', email: '', phone: '', message: '' });
     } catch {
       toast({
-        title: 'Erro ao enviar',
-        description: 'Tente novamente mais tarde.',
+        title: t('contact.error.title'),
+        description: t('contact.error.desc'),
         variant: 'destructive',
       });
     } finally {
@@ -80,7 +80,7 @@ export default function Contact() {
             <Card className="border-border/50">
               <CardContent className="p-8">
                 <h2 className="font-display text-2xl font-bold mb-6">
-                  Envie uma mensagem
+                  {t('contact.formTitle')}
                 </h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
@@ -93,7 +93,7 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      placeholder="Seu nome completo"
+                      placeholder={t('contact.placeholder.name')}
                     />
                   </div>
 
@@ -109,7 +109,7 @@ export default function Contact() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        placeholder="seu@email.com"
+                        placeholder={t('contact.placeholder.email')}
                       />
                     </div>
                     <div>
@@ -122,7 +122,7 @@ export default function Contact() {
                         type="tel"
                         value={formData.phone}
                         onChange={handleChange}
-                        placeholder="(00) 00000-0000"
+                        placeholder={t('contact.placeholder.phone')}
                       />
                     </div>
                   </div>
@@ -137,7 +137,7 @@ export default function Contact() {
                       value={formData.message}
                       onChange={handleChange}
                       required
-                      placeholder="Como podemos ajudar?"
+                      placeholder={t('contact.placeholder.message')}
                       rows={5}
                     />
                   </div>
@@ -149,7 +149,7 @@ export default function Contact() {
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (
-                      'Enviando...'
+                      t('contact.sending')
                     ) : (
                       <>
                         {t('contact.form.submit')}
