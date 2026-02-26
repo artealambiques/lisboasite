@@ -22,16 +22,30 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch('https://web.artetecnicalisboa.com.br/webhook/formsite', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
 
-    toast({
-      title: 'Mensagem enviada!',
-      description: 'Entraremos em contato em breve.',
-    });
+      if (!response.ok) throw new Error('Erro ao enviar');
 
-    setFormData({ name: '', email: '', phone: '', message: '' });
-    setIsSubmitting(false);
+      toast({
+        title: 'Mensagem enviada!',
+        description: 'Entraremos em contato em breve.',
+      });
+
+      setFormData({ name: '', email: '', phone: '', message: '' });
+    } catch {
+      toast({
+        title: 'Erro ao enviar',
+        description: 'Tente novamente mais tarde.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
