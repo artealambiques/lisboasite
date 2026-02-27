@@ -192,12 +192,12 @@ export default function Products() {
         <div className="container mx-auto px-4">
           <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
             {/* Category Tabs */}
-            <TabsList className="flex flex-wrap justify-center gap-2 mb-12 bg-transparent h-auto">
+            <TabsList className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 mb-12 bg-transparent h-auto w-full max-w-6xl mx-auto">
               {categories.map((category) => (
                 <TabsTrigger
                   key={category.key}
                   value={category.key}
-                  className="data-[state=active]:bg-gradient-copper data-[state=active]:text-primary px-4 py-3 rounded-lg border border-border data-[state=active]:border-transparent"
+                  className="data-[state=active]:bg-gradient-copper data-[state=active]:text-primary px-4 py-3 rounded-lg border border-border data-[state=active]:border-transparent w-full justify-start text-left whitespace-nowrap"
                 >
                   {category.icon === 'barrel' ? (
                     <span className="mr-2 text-foreground"><BarrelIcon className="w-5 h-5 inline" /></span>
