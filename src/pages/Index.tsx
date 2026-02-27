@@ -189,7 +189,7 @@ export default function Index() {
           <div className="text-center">
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
               <a
-                href="https://drive.google.com/uc?export=download&id=1eGY8RQzpE7SBnXqzdemGrHWGGk8q2Iyp"
+                href="https://drive.google.com/file/d/1eGY8RQzpE7SBnXqzdemGrHWGGk8q2Iyp/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
