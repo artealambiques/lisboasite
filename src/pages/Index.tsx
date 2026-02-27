@@ -188,10 +188,14 @@ export default function Index() {
 
           <div className="text-center">
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-              <Link to="/produtos">
+              <a
+                href="https://drive.google.com/uc?export=download&id=1eGY8RQzpE7SBnXqzdemGrHWGGk8q2Iyp"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {t('products.viewAll')}
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
+              </a>
             </Button>
           </div>
         </div>
