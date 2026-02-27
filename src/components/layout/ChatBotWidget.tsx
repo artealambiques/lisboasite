@@ -117,8 +117,10 @@ export function ChatBotWidget() {
             ))}
             {isLoading && (
               <div className="flex justify-start">
-                <div className="bg-secondary text-secondary-foreground px-3 py-2 rounded-xl rounded-bl-sm">
-                  <Loader2 className="w-4 h-4 animate-spin" />
+                <div className="bg-secondary text-secondary-foreground px-4 py-3 rounded-xl rounded-bl-sm flex items-center gap-1">
+                  <span className="w-2 h-2 rounded-full bg-muted-foreground/60 animate-bounce" style={{ animationDelay: '0ms', animationDuration: '1.2s' }} />
+                  <span className="w-2 h-2 rounded-full bg-muted-foreground/60 animate-bounce" style={{ animationDelay: '200ms', animationDuration: '1.2s' }} />
+                  <span className="w-2 h-2 rounded-full bg-muted-foreground/60 animate-bounce" style={{ animationDelay: '400ms', animationDuration: '1.2s' }} />
                 </div>
               </div>
             )}
