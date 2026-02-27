@@ -257,6 +257,12 @@ const translations = {
 
     // WhatsApp
     'whatsapp.message': 'Olá! Gostaria de mais informações sobre equipamentos.',
+
+    // Chatbot
+    'chatbot.title': 'Atendimento Online',
+    'chatbot.welcome': 'Olá! Como posso ajudar você hoje?',
+    'chatbot.placeholder': 'Digite sua mensagem...',
+    'chatbot.error': 'Desculpe, ocorreu um erro. Tente novamente.',
   },
   'pt-pt': {
     // Navigation
@@ -506,6 +512,12 @@ const translations = {
 
     // WhatsApp
     'whatsapp.message': 'Olá! Gostaria de mais informações sobre equipamentos.',
+
+    // Chatbot
+    'chatbot.title': 'Atendimento Online',
+    'chatbot.welcome': 'Olá! Como posso ajudá-lo hoje?',
+    'chatbot.placeholder': 'Escreva a sua mensagem...',
+    'chatbot.error': 'Desculpe, ocorreu um erro. Tente novamente.',
   },
   es: {
     // Navigation
@@ -755,6 +767,12 @@ const translations = {
 
     // WhatsApp
     'whatsapp.message': '¡Hola! Me gustaría más información sobre equipos.',
+
+    // Chatbot
+    'chatbot.title': 'Atención en Línea',
+    'chatbot.welcome': '¡Hola! ¿Cómo puedo ayudarte hoy?',
+    'chatbot.placeholder': 'Escribe tu mensaje...',
+    'chatbot.error': 'Lo siento, ocurrió un error. Inténtalo de nuevo.',
   },
   en: {
     // Navigation
@@ -1004,6 +1022,12 @@ const translations = {
 
     // WhatsApp
     'whatsapp.message': 'Hello! I would like more information about equipment.',
+
+    // Chatbot
+    'chatbot.title': 'Online Support',
+    'chatbot.welcome': 'Hello! How can I help you today?',
+    'chatbot.placeholder': 'Type your message...',
+    'chatbot.error': 'Sorry, an error occurred. Please try again.',
   },
 };
 
