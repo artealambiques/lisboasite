@@ -8,6 +8,8 @@ interface Message {
 }
 
 const N8N_CHAT_URL = 'https://web.artetecnicalisboa.com.br/webhook/cb7ca1bd-f782-4df6-a73c-476be1ac3e89/chat';
+const URL_SPLIT_REGEX = /(https?:\/\/[^\s]+)/g;
+const URL_MATCH_REGEX = /https?:\/\/[^\s]+/;
 
 function generateSessionId() {
   return 'session_' + Math.random().toString(36).substring(2, 15) + Date.now().toString(36);
@@ -72,6 +74,37 @@ export function ChatBotWidget() {
     }
   };
 
+  const renderMessageContent = (content: string) => {
+    const lines = content.split('\n');
+
+    return lines.map((line, lineIndex) => (
+      <span key={`line-${lineIndex}`}>
+        {line.split(URL_SPLIT_REGEX).map((part, partIndex) => {
+          if (URL_MATCH_REGEX.test(part)) {
+            return (
+              <a
+                key={`link-${lineIndex}-${partIndex}`}
+                href={part}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline break-words"
+              >
+                {part}
+              </a>
+            );
+          }
+
+          return (
+            <span key={`text-${lineIndex}-${partIndex}`}>
+              {part}
+            </span>
+          );
+        })}
+        {lineIndex < lines.length - 1 && <br />}
+      </span>
+    ));
+  };
+
   return (
     <>
       {/* Chat Window */}
@@ -111,7 +144,7 @@ export function ChatBotWidget() {
                       : 'bg-secondary text-secondary-foreground rounded-bl-sm'
                   }`}
                 >
-                  {msg.content}
+                  {renderMessageContent(msg.content)}
                 </div>
               </div>
             ))}
